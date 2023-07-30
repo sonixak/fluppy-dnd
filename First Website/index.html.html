@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Simple Notepad</title>
+  <link rel="stylesheet" type="text/css" href="styles.css">
+</head>
+<body>
+
+  <button onclick="goToCharacterLink()"><img src="C:\Users\Vechi\Downloads\dnd-icon-22.jpg" alt="Description of the image" width="30" height="35"></button>
+  
+  <script>
+    function goToCharacterLink() {
+      window.open('https://www.dndbeyond.com/characters', '_blank');
+    }
+  </script>
+
+  <div class="notepad">
+    <textarea id="textArea" rows="20" cols="80"></textarea>
+    <button onclick="saveText()">Save Notes</button>
+    <button onclick="loadText()">Load Notes</button>
+   </div>
+  <script src="script.js"></script>
+ </body>
+</html>
