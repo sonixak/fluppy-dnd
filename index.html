@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Simple Calculator</title>
+  <style>
+    body {
+      font-family: Arial, sans-serif;
+      background-color: #f0f0f0;
+    }
+
+    .calculator {
+      width: 400px;
+      margin: 50px auto;
+      background-color: #ffffff;
+      border-radius: 10px;
+      box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+      padding: 20px;
+    }
+
+    .number-inputs textarea {
+      width: 100%;
+      padding: 8px;
+      margin-bottom: 10px;
+      font-size: 18px;
+      border: 1px solid #ccc;
+      border-radius: 5px;
+    }
+
+    .number-inputs div {
+      display: flex;
+      justify-content: flex-end;
+    }
+
+    .number-inputs div textarea {
+      font-size: 24px;
+      font-weight: bold;
+      border: none;
+      resize: none;
+      background-color: #f0f0f0;
+    }
+  </style>
+</head>
+<body>
+  <div class="calculator">
+    <div class="number-inputs">
+      <textarea id="number1" rows="3" placeholder="Ability Modifier"></textarea>
+      <textarea id="number2" rows="3" placeholder="D20"></textarea>
+      <textarea id="number3" rows="3" placeholder="Proficiency Bonus"></textarea>
+      <textarea id="number4" rows="3" placeholder="Other Bonuses"></textarea>
+      <div>
+        <textarea id="number5" rows="3" placeholder="Output"></textarea>
+      </div>
+    </div>
+  </div>
+  <script>
+    function calculateTotal() {
+      // Same calculation function as previous code...
+    }
+      calculateTotal();
+    });
+  </script>
+</body>
+</html>
