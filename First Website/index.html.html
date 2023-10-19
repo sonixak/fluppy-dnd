@@ -7,7 +7,7 @@
 <body>
 
   <button onclick="goToCharacterLink()"><img src="https://icon-library.com/images/dnd-icon/dnd-icon-22.jpg" alt="Description of the image" width="30" height="35"></button>
-  
+
   <script>
     function goToCharacterLink() {
       window.open('https://www.dndbeyond.com/characters', '_blank');
@@ -17,7 +17,9 @@
   <div class="notepad">
     <textarea id="textArea" rows="20" cols="80"></textarea>
     <button onclick="saveText()">Save Notes</button>
-    <button onclick="loadText()">Load Notes</button>  <script src="script.js"></script>
+    <button onclick="loadText()">Load Notes</button>
+  </div>
+
   <button class="dice" onclick="rollDice(4)">Roll d4</button>
   <button class="dice" onclick="rollDice(6)">Roll d6</button>
   <button class="dice" onclick="rollDice(8)">Roll d8</button>
@@ -30,7 +32,7 @@
     function rollDice(diceType) {
       const diceResult = Math.floor(Math.random() * diceType) + 1;
       document.getElementById('result').textContent = `You rolled a ${diceResult} on a d${diceType}!`;
-    } 
-  </div>
+    }
+  </script>
  </body>
 </html>
