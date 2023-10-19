@@ -17,8 +17,8 @@
   <div class="notepad">
     <textarea id="textArea" rows="20" cols="80"></textarea>
     <button onclick="saveText()">Save Notes</button>
-    <button onclick="loadText()">Load Notes</button>
-      <button class="dice" onclick="rollDice(4)">Roll d4</button>
+    <button onclick="loadText()">Load Notes</button>  <script src="script.js"></script>
+  <button class="dice" onclick="rollDice(4)">Roll d4</button>
   <button class="dice" onclick="rollDice(6)">Roll d6</button>
   <button class="dice" onclick="rollDice(8)">Roll d8</button>
   <button class="dice" onclick="rollDice(10)">Roll d10</button>
@@ -31,7 +31,6 @@
       const diceResult = Math.floor(Math.random() * diceType) + 1;
       document.getElementById('result').textContent = `You rolled a ${diceResult} on a d${diceType}!`;
     } 
-   </div>
-  <script src="script.js"></script>
+  </div>
  </body>
 </html>
