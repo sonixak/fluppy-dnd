@@ -33,6 +33,41 @@
       const diceResult = Math.floor(Math.random() * diceType) + 1;
       document.getElementById('result').textContent = `You rolled a ${diceResult} on a d${diceType}!`;
     }
+    
+    function saveText() {
+      const text = document.getElementById('textArea').value;
+      const blob = new Blob([text], { type: 'text/plain' });
+      const url = URL.createObjectURL(blob);
+
+      const a = document.createElement('a');
+      a.href = url;
+      a.download = 'notepad.txt';
+      a.style.display = 'none';
+      document.body.appendChild(a);
+      a.click();
+      document.body.removeChild(a);
+
+      URL.revokeObjectURL(url);
+    }
+
+    function loadText() {
+      const input = document.createElement('input');
+      input.type = 'file';
+      input.accept = 'text/plain';
+
+      input.onchange = function(event) {
+        const file = event.target.files[0];
+        const reader = new FileReader();
+
+        reader.onload = function() {
+          document.getElementById('textArea').value = reader.result;
+        };
+
+        reader.readAsText(file);
+      };
+
+      input.click();
+    }
   </script>
- </body>
+</body>
 </html>
